@@ -175,9 +175,9 @@ export function usePathfinding() {
   const runBFS = useCallback(() => {
     if (!gridState.startNode || !gridState.endNode || gridState.isRunning) return;
 
-    const startCell = gridState.grid[gridState.startNode.row][gridState.startNode.col];
-    const endCell = gridState.grid[gridState.endNode.row][gridState.endNode.col];
     const cleanGrid = resetGrid(gridState.grid);
+    const startCell = cleanGrid[gridState.startNode.row][gridState.startNode.col];
+    const endCell = cleanGrid[gridState.endNode.row][gridState.endNode.col];
     
     setGridState(prev => ({ ...prev, grid: cleanGrid }));
     
@@ -188,9 +188,9 @@ export function usePathfinding() {
   const runDFS = useCallback(() => {
     if (!gridState.startNode || !gridState.endNode || gridState.isRunning) return;
 
-    const startCell = gridState.grid[gridState.startNode.row][gridState.startNode.col];
-    const endCell = gridState.grid[gridState.endNode.row][gridState.endNode.col];
     const cleanGrid = resetGrid(gridState.grid);
+    const startCell = cleanGrid[gridState.startNode.row][gridState.startNode.col];
+    const endCell = cleanGrid[gridState.endNode.row][gridState.endNode.col];
     
     setGridState(prev => ({ ...prev, grid: cleanGrid }));
     
