@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import { breadthFirstSearch, depthFirstSearch, resetGrid, createEmptyGrid } from '../utils/algorithms';
+import { breadthFirstSearch, depthFirstSearch, resetGrid, createEmptyGrid } from '../utils/algorithms.jsx';
 
 // Initial statistics for the grid
 const initialStats = {
@@ -29,7 +29,7 @@ export function usePathfinding() {
     status: 'Ready'
   });
 
-  const animationTimeouts = useRef<NodeJS.Timeout[]>([]);
+  const animationTimeouts = useRef([]);
 
   const clearTimeouts = useCallback(() => {
     animationTimeouts.current.forEach(timeout => clearTimeout(timeout));
@@ -53,7 +53,7 @@ export function usePathfinding() {
     }));
   }, []);
 
-  const handleCellClick = useCallback((row: number, col: number) => {
+  const handleCellClick = useCallback((row, col) => {
     if (gridState.isRunning) return;
 
     setGridState(prev => {

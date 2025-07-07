@@ -2,15 +2,16 @@
 
 ## Overview
 
-This is a React.js web application that visualizes pathfinding algorithms on an interactive grid. The application allows users to create obstacles, set start and end points, and watch algorithms like BFS (Breadth-First Search) and DFS (Depth-First Search) find paths in real-time with smooth animations.
+This is a React.js web application that visualizes pathfinding algorithms on an interactive grid. Written in pure JavaScript (not TypeScript) for educational clarity, the application allows users to create obstacles, set start and end points, and watch algorithms like BFS (Breadth-First Search) and DFS (Depth-First Search) find paths in real-time with smooth animations. All code includes detailed comments making it perfect for educational presentations.
 
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React 18 with TypeScript using Vite as the build tool
+- **Framework**: React 18 with JavaScript (not TypeScript) using Vite as the build tool for educational clarity
 - **Styling**: Tailwind CSS with shadcn/ui component library for modern, accessible UI components
 - **State Management**: Custom React hooks with local state management
 - **Animation**: CSS transitions and JavaScript timeouts for algorithm visualization
+- **Code Style**: Heavily commented pure JavaScript for easy teacher presentation and student understanding
 
 ### Backend Architecture
 - **Server**: Express.js with TypeScript

@@ -1,45 +1,49 @@
-export type CellType = 'empty' | 'wall' | 'start' | 'end' | 'visited' | 'path';
+// Cell types: 'empty', 'wall', 'start', 'end', 'visited', 'path'
+// Interaction modes: 'wall', 'start', 'end'
 
-export type InteractionMode = 'wall' | 'start' | 'end';
+// Cell object structure:
+// {
+//   row: number,
+//   col: number,
+//   type: string,
+//   isVisited: boolean,
+//   isPath: boolean,
+//   distance: number,
+//   previousNode: Cell or null
+// }
 
-export interface Cell {
-  row: number;
-  col: number;
-  type: CellType;
-  isVisited: boolean;
-  isPath: boolean;
-  distance: number;
-  previousNode: Cell | null;
-}
+// Position object structure:
+// {
+//   row: number,
+//   col: number
+// }
 
-export interface Position {
-  row: number;
-  col: number;
-}
+// Algorithm result structure:
+// {
+//   visitedNodesInOrder: Cell[],
+//   path: Cell[],
+//   found: boolean
+// }
 
-export interface AlgorithmResult {
-  visitedNodesInOrder: Cell[];
-  path: Cell[];
-  found: boolean;
-}
+// Grid stats structure:
+// {
+//   totalCells: number,
+//   wallCount: number,
+//   visitedCount: number,
+//   pathLength: number,
+//   executionTime: number
+// }
 
-export interface GridStats {
-  totalCells: number;
-  wallCount: number;
-  visitedCount: number;
-  pathLength: number;
-  executionTime: number;
-}
-
-export interface GridState {
-  grid: Cell[][];
-  startNode: Position | null;
-  endNode: Position | null;
-  isRunning: boolean;
-  mode: InteractionMode;
-  gridSize: number;
-  animationSpeed: number;
-  allowDiagonal: boolean;
-  stats: GridStats;
-  status: string;
-}
+// Grid state structure:
+// {
+//   grid: Cell[][],
+//   startNode: Position or null,
+//   endNode: Position or null,
+//   isRunning: boolean,
+//   mode: string,
+//   gridSize: number,
+//   animationSpeed: number,
+//   allowDiagonal: boolean,
+//   stats: GridStats,
+//   status: string
+// }

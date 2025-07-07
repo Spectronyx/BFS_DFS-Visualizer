@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import Cell from './Cell';
+import Cell from './Cell.jsx';
 
 // Grid Component - Renders the pathfinding grid
 // Props: grid (2D array), onCellClick (function)
