@@ -1,0 +1,75 @@
+I want to build a React.js web application that visualizes pathfinding algorithms on a grid. The app should meet the following requirements:
+
+    Project Setup:
+
+        Use React (preferably with Vite or Create React App).
+
+        The app should be fully frontend-only using JavaScript.
+
+        The app must run smoothly on Replit.
+
+    UI and Layout:
+
+        Display a grid of cells (e.g., 20x20 or configurable).
+
+        Each cell can be in one of these states: empty, wall, start node, end node, visited node, or path node.
+
+        The user should be able to:
+
+            Click on a cell to toggle a wall.
+
+            Set exactly one start node and one end node by clicking with a modifier key or separate buttons to select start/end mode.
+
+        Include control buttons:
+
+            Run BFS algorithm.
+
+            Run DFS algorithm.
+
+            Reset grid (clear walls and paths but keep start/end nodes).
+
+            Clear everything (reset start/end nodes too).
+
+    Pathfinding Algorithms:
+
+        Implement Breadth-First Search (BFS) to find the shortest path.
+
+        Implement Depth-First Search (DFS) as an alternative traversal.
+
+        Both algorithms should:
+
+            Animate their search by sequentially highlighting visited nodes.
+
+            After the search, highlight the final path from start to end if found.
+
+    Animation:
+
+        Use React state and timers (setTimeout or similar) to animate node visitation in order.
+
+        Visited nodes should appear visually distinct from walls, path, and start/end.
+
+        Provide a reasonable animation speed for smooth visualization (about 50–100 ms delay per node).
+
+    Responsiveness & Styling:
+
+        The grid should resize or scroll if the window size is small.
+
+        Use simple but clean CSS styling for different node states.
+
+        The UI should have a clean control panel with buttons for actions.
+
+    Code Structure:
+
+        Modular React components: Grid, Cell, ControlPanel, Algorithms (could be hooks or utility functions).
+
+        Clear state management to track grid state, start/end positions, and animation progress.
+
+    Extra (Optional):
+
+        Add a way to toggle diagonal movement in pathfinding.
+
+        Add a speed slider to adjust animation speed.
+
+        Add message notifications or status indicators for algorithm running, path found, or no path found.
+
+Please generate the complete React app code including all components, CSS styles, and utility functions necessary to run the app in a single Replit environment.
