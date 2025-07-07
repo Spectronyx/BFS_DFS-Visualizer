@@ -95,6 +95,8 @@ This is a React.js web application that visualizes pathfinding algorithms on an 
 
 ## Changelog
 - July 07, 2025. Initial setup
+- July 07, 2025. Converted all code from TypeScript to JavaScript/JSX for educational presentation
+- July 07, 2025. Added comprehensive README.md with detailed documentation for teacher presentations
 
 ## User Preferences
 
