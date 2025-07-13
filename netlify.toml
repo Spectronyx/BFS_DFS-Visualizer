@@ -1,0 +1,21 @@
+[build]
+  # Build command for Netlify
+  command = "npm run build"
+  # Directory to publish (where built files are located)
+  publish = "dist/public"
+
+[build.environment]
+  # Node.js version for build
+  NODE_VERSION = "18"
+
+# Redirect all routes to index.html for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Optional: Configure caching for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
