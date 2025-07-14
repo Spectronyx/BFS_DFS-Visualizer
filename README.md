@@ -122,6 +122,8 @@ function breadthFirstSearch(grid, startNode, endNode, allowDiagonal) {
 
 ## 🔧 Installation & Setup
 
+**You can simply use it by clicking the link:** https://grafalgovisualizer.netlify.app/
+
 ### Prerequisites
 - **Node.js** (version 18 or higher)
 - **npm** or **yarn** package manager
